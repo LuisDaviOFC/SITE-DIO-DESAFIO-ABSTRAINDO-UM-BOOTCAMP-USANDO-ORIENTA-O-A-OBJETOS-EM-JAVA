@@ -2,49 +2,27 @@ package DesafioBootcamp;
 
 import java.time.LocalDate;
 
-public class Mentoria {
-    //Atributos
-    private String titulo;
-    private String descricao;
+public class Mentoria extends Conteudo {
     private LocalDate data;
 
-    //Método
-
-    public Mentoria(String titulo, String descricao) {
-        this.titulo = titulo;
-        this.descricao = descricao;
+    public double calcularXp() {
+        return 30.0;
     }
 
-    //Métodos Especiais
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public Mentoria() {
     }
 
     public LocalDate getData() {
-        return data;
+        return this.data;
     }
 
     public void setData(LocalDate data) {
         this.data = data;
     }
 
-    @Override
+    //FORMATAÇÃO DAS INFORMAÇÕES NA TELA
     public String toString() {
-        return "Mentoria{" +
-                " titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'';
+        String resultado = this.getTitulo();
+        return " Mentoria: { titulo = '" + resultado + "', descrição = '" + this.getDescricao() + "', data = " + this.data + " }";
     }
 }
